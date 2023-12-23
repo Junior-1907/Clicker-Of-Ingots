@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.cdnfonts.com/css/xilosa" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+    <title>Clicker Game</title>
+
+</head>
+<body>
+    <button id="dark-light-button" onclick="document.querySelector('body').classList.toggle('noturno')">
+        <span id="btnnoturno">
+          <span class="material-symbols-outlined">dark_mode</span>
+          Modo noturno
+        </span>
+        <span id="btndiurno">
+          <span class="material-symbols-outlined">light_mode</span>
+          Modo diurno
+        </span>
+      </button>
+    </button>
+<div class="container">
+    <!-- Upgrade Shop -->
+    <div class="container1">
+        <h2>Shop</h2>
+        <div class="items">
+        <div class="upgrade shop">
+            <img src="imgs/hammer upgrade.png"> 
+            <div>
+                <h3>HAMMAH!</h3>
+                <p>+1 Hammer Power</p>
+            </div>
+            <button onclick="clickPowerAdd()">$ <span id="click-power-display">75 (1)</span></button>
+        </div>
+        <div class="upgrade shop">
+            <img src="imgs/cooper furnace.png">
+            <div>
+                <h3>COOPER  FURNACE</h3>
+                <p>+5 Ingots per second</p>
+            </div>
+            <button onclick="cooperFurnaceAdd()">$ <span id="cooper-furnace-display" >350 (0)</span></button>
+        </div>
+        <div class="upgrade shop">
+            <img src="imgs/iron furnace.png">
+            <div>
+                <h3>IRON FURNACE</h3>
+                <p>+65 Ingots per second</p>
+            </div>
+            <button onclick="ironFurnaceAdd()">$ <span id="iron-furnace-display">3000 (0)</span></button>
+        </div>
+        <div class="upgrade shop">
+            <img src="imgs/moneybag.png" style="width: 80px;">
+            <div>
+                <h3>AUTO SELLER</h3>
+                <p>Sell Ingots automatically</p>
+            </div>
+            <button onclick="autoSelling()" id="auto-seller-display">$ 5000 (0)</button>
+        </div>
+        <div class="upgrade shop">
+            <img src="imgs/gold furnace.png">
+            <div>
+                <h3>GOLD FURNACE</h3>
+                <p>+1250 Ingots per second</p>
+            </div>
+            <button onclick="goldFurnaceAdd()">$ <span id="gold-furnace-display">25000 (0)</span></button>
+        </div>
+        
+        </div>
+    </div>
+
+    <!-- Ingots and Display -->
+    <div class="container2">
+        <img src="imgs/background.gif" alt="blacksmith">
+
+        <section id="display-grid">
+        <div>
+            <p id="ingot-display"> 0</p>
+            <button id="makeButton" onclick="clickIngot()">Make Ingots</button>
+        </div>
+        <div>
+            <p id="money-display-style"> <span id="money-display">0</span> </p>
+            <button id="sellButton" onclick="clickMoney()">Sell Ingots</button>
+        </div>
+        </section>
+    </div>
+</div>
+    <script src="script.js"></script>
+</body>
+</html>
